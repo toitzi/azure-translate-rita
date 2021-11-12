@@ -1,0 +1,47 @@
+{
+    "name": "rita-azure-translate-api",
+    "version": "1.0.0",
+    "description": "A API for Azure Translator API",
+    "main": "index.js",
+    "scripts": {
+        "test": "xo && nyc ava",
+        "release": "npm test && npm version $VER && npm publish",
+        "postrelease": "git push --follow-tags --no-verify",
+        "release-patch": "VER=patch npm run release",
+        "release-minor": "VER=minor npm run release"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/toitzi/azure-translate-rita"
+    },
+    "keywords": [
+        "translate",
+        "translator",
+        "azure",
+        "translate",
+        "api",
+        "language"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/toitzi/azure-translate-rita/issues"
+    },
+    "homepage": "https://github.com/toitzi/azure-translate-rita#readme",
+    "dependencies": {
+        "got": "^11.8.2"
+    },
+    "devDependencies": {
+        "ava": "^3.15.0",
+        "nyc": "^15.1.0",
+        "xo": "^0.46.4"
+    },
+    "xo": {
+        "space": 4,
+        "parserOptions": {
+            "ecmaScript": 12
+        },
+        "rules": {
+            "unicorn/prefer-module": 0
+        }
+    }
+}
